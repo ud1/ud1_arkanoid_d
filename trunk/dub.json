@@ -1,0 +1,13 @@
+{
+	"name": "ud1_arkanoid_d",
+	"description": "A minimal D application.",
+	"copyright": "Copyright © 2015, ud1",
+	"authors": ["ud1"],
+	"dependencies": {
+		"derelict-sdl2": "1.9.0",
+		"derelict-gl3": ">=1.0.11",
+		"derelict-al": ">=1.0.0",
+		"derelict-ogg": ">=1.0.1",
+		"derelict-vorbis": ">=1.0.1"
+	}
+}

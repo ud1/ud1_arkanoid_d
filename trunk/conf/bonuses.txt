@@ -1,0 +1,28 @@
+// radius bonus_rad
+radius 0.2
+
+// speed speed
+speed 1.0
+
+// bonus bonus_type left top right bottom red green blue
+
+// long platform
+bonus 2 327 203 351 227 0 1 0
+
+// short platform
+bonus 3 327 203 351 227 1 0 0
+
+// gravity left
+bonus 4 295 203 319 227 0 0 1
+
+// gravity right
+bonus 5 319 203 295 227 0 0 1
+
+// timer speed down
+bonus 6 263 203 287 227 0 1 0
+
+// timer speed up
+bonus 7 263 203 287 227 1 0 0
+
+// reserved ball
+bonus 8 359 203 383 227 0 1 0

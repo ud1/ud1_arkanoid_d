@@ -1,0 +1,442 @@
+// balls reserved_balls_number
+balls 5
+
+// platform_scale x y
+platform_scale 1.5 0.3
+
+// short_platform_scale x y
+short_platform_scale 1.0 0.2
+
+// long_platform_scale x y
+long_platform_scale 2.0 0.4
+
+// gravity x y
+gravity 0.0 -7.0
+
+// gravity_left x y
+gravity_left -3.0 -7.0
+
+// gravity_right x y
+gravity_right 3.0 -7.0
+
+// bonus_time platform_bonus_time gravity_bonus_time time_bonus_time
+bonus_time 20 20 20
+
+// velocity_loss_wall value
+velocity_loss_wall 0.05
+
+// velocity_loss_platform value
+velocity_loss_platform 0.2
+
+// surf_friction_coef_wall value
+surf_friction_coef_wall 0.05
+
+// surf_friction_coef_platform value
+surf_friction_coef_platform 0.15
+
+// clouds alpha vx vy
+clouds 0.5 0.1 0.1
+
+// brick brick1_type life velocity_loss surf_friction_coef scale_x scale_y pos_x pos_y angle_in_degrees points is_static bonus
+
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 4
+pos_sine 4 0 4 0.00 1 6 0
+pos_sine 4 0 4 1.00 1 0 -6
+angle_lin 4 0 4 0.00 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 5
+pos_sine 4 0 4 0.40 1 6 0
+pos_sine 4 0 4 1.40 1 0 -6
+angle_lin 4 0 4 0.40 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 3
+pos_sine 4 0 4 0.80 1 6 0
+pos_sine 4 0 4 1.80 1 0 -6
+angle_lin 4 0 4 0.80 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 6
+pos_sine 4 0 4 1.20 1 6 0
+pos_sine 4 0 4 2.20 1 0 -6
+angle_lin 4 0 4 1.20 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 7
+pos_sine 4 0 4 1.60 1 6 0
+pos_sine 4 0 4 2.60 1 0 -6
+angle_lin 4 0 4 1.60 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 0
+pos_sine 4 0 4 2.00 1 6 0
+pos_sine 4 0 4 3.00 1 0 -6
+angle_lin 4 0 4 2.00 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 4
+pos_sine 4 0 4 2.40 1 6 0
+pos_sine 4 0 4 3.40 1 0 -6
+angle_lin 4 0 4 2.40 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 3
+pos_sine 4 0 4 2.80 1 6 0
+pos_sine 4 0 4 3.80 1 0 -6
+angle_lin 4 0 4 2.80 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 5
+pos_sine 4 0 4 3.20 1 6 0
+pos_sine 4 0 4 4.20 1 0 -6
+angle_lin 4 0 4 3.20 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.0 9.5 90 60 1 6
+pos_sine 4 0 4 3.60 1 6 0
+pos_sine 4 0 4 4.60 1 0 -6
+angle_lin 4 0 4 3.60 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+
+
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 0
+pos_sine 3 0 3 0.00 1 5.2 0
+pos_sine 3 0 3 0.75 1 0 -5.2
+angle_lin 3 0 3 0.00 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 0
+pos_sine 3 0 3 0.30 1 5.2 0
+pos_sine 3 0 3 1.05 1 0 -5.2
+angle_lin 3 0 3 0.30 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 0
+pos_sine 3 0 3 0.60 1 5.2 0
+pos_sine 3 0 3 1.35 1 0 -5.2
+angle_lin 3 0 3 0.60 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 6
+pos_sine 3 0 3 0.90 1 5.2 0
+pos_sine 3 0 3 1.65 1 0 -5.2
+angle_lin 3 0 3 0.90 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 7
+pos_sine 3 0 3 1.20 1 5.2 0
+pos_sine 3 0 3 1.95 1 0 -5.2
+angle_lin 3 0 3 1.20 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 0
+pos_sine 3 0 3 1.50 1 5.2 0
+pos_sine 3 0 3 2.25 1 0 -5.2
+angle_lin 3 0 3 1.50 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 6
+pos_sine 3 0 3 1.80 1 5.2 0
+pos_sine 3 0 3 2.55 1 0 -5.2
+angle_lin 3 0 3 1.80 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 3
+pos_sine 3 0 3 2.10 1 5.2 0
+pos_sine 3 0 3 2.85 1 0 -5.2
+angle_lin 3 0 3 2.10 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 0
+pos_sine 3 0 3 2.40 1 5.2 0
+pos_sine 3 0 3 3.15 1 0 -5.2
+angle_lin 3 0 3 2.40 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick block3 500 0.3 0.05 0.9 0.3 2.4 9.1 90 60 1 8
+pos_sine 3 0 3 2.70 1 5.2 0
+pos_sine 3 0 3 3.45 1 0 -5.2
+angle_lin 3 0 3 2.70 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+
+
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 2
+pos_sine 3 0 3 0.15 1 4.6 0
+pos_sine 3 0 3 0.90 1 0 -4.6
+angle_lin 3 0 3 0.15 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 4
+pos_sine 3 0 3 0.45 1 4.6 0
+pos_sine 3 0 3 1.20 1 0 -4.6
+angle_lin 3 0 3 0.45 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 6
+pos_sine 3 0 3 0.75 1 4.6 0
+pos_sine 3 0 3 1.50 1 0 -4.6
+angle_lin 3 0 3 0.75 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 2
+pos_sine 3 0 3 1.05 1 4.6 0
+pos_sine 3 0 3 1.80 1 0 -4.6
+angle_lin 3 0 3 1.05 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 0
+pos_sine 3 0 3 1.35 1 4.6 0
+pos_sine 3 0 3 2.10 1 0 -4.6
+angle_lin 3 0 3 1.35 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 5
+pos_sine 3 0 3 1.65 1 4.6 0
+pos_sine 3 0 3 2.40 1 0 -4.6
+angle_lin 3 0 3 1.65 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 2
+pos_sine 3 0 3 1.95 1 4.6 0
+pos_sine 3 0 3 2.70 1 0 -4.6
+angle_lin 3 0 3 1.95 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 0
+pos_sine 3 0 3 2.25 1 4.6 0
+pos_sine 3 0 3 3.00 1 0 -4.6
+angle_lin 3 0 3 2.25 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 2
+pos_sine 3 0 3 2.55 1 4.6 0
+pos_sine 3 0 3 3.30 1 0 -4.6
+angle_lin 3 0 3 2.55 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick24 1 0.3 0.05 0.9 0.3 2.7 8.8 0 120 0 3
+pos_sine 3 0 3 2.85 1 4.6 0
+pos_sine 3 0 3 3.60 1 0 -4.6
+angle_lin 3 0 3 2.85 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+
+
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 6
+pos_sine 3 0 3 0.00 1 4.4 0
+pos_sine 3 0 3 0.75 1 0 -4.4
+angle_lin 3 0 3 0.00 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 7
+pos_sine 3 0 3 0.30 1 4.4 0
+pos_sine 3 0 3 1.05 1 0 -4.4
+angle_lin 3 0 3 0.30 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 2
+pos_sine 3 0 3 0.60 1 4.4 0
+pos_sine 3 0 3 1.35 1 0 -4.4
+angle_lin 3 0 3 0.60 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 4
+pos_sine 3 0 3 0.90 1 4.4 0
+pos_sine 3 0 3 1.65 1 0 -4.4
+angle_lin 3 0 3 0.90 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 0
+pos_sine 3 0 3 1.20 1 4.4 0
+pos_sine 3 0 3 1.95 1 0 -4.4
+angle_lin 3 0 3 1.20 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 2
+pos_sine 3 0 3 1.50 1 4.4 0
+pos_sine 3 0 3 2.25 1 0 -4.4
+angle_lin 3 0 3 1.50 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 2
+pos_sine 3 0 3 1.80 1 4.4 0
+pos_sine 3 0 3 2.55 1 0 -4.4
+angle_lin 3 0 3 1.80 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 6
+pos_sine 3 0 3 2.10 1 4.4 0
+pos_sine 3 0 3 2.85 1 0 -4.4
+angle_lin 3 0 3 2.10 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 0
+pos_sine 3 0 3 2.40 1 4.4 0
+pos_sine 3 0 3 3.15 1 0 -4.4
+angle_lin 3 0 3 2.40 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick25 1 0.3 0.05 0.9 0.3 2.8 8.7 90 150 0 0
+pos_sine 3 0 3 2.70 1 4.4 0
+pos_sine 3 0 3 3.45 1 0 -4.4
+angle_lin 3 0 3 2.70 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+
+
+brick brick26 1 0.3 0.05 0.8 0.3 3.8 7.7 90 150 0 0
+pos_sine 2.8 0 2.8 0.00 1 2.4 0
+pos_sine 2.8 0 2.8 0.75 1 0 -2.4
+angle_lin 2.5 0 2.5 0.00 0 -360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick26 1 0.3 0.05 0.8 0.3 3.8 7.7 90 150 0 2
+pos_sine 2.8 0 2.8 0.40 1 2.4 0
+pos_sine 2.8 0 2.8 1.15 1 0 -2.4
+angle_lin 2.5 0 2.5 0.40 0 -360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick26 1 0.3 0.05 0.8 0.3 3.8 7.7 90 150 0 0
+pos_sine 2.8 0 2.8 0.80 1 2.4 0
+pos_sine 2.8 0 2.8 1.55 1 0 -2.4
+angle_lin 2.5 0 2.5 0.80 0 -360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick26 1 0.3 0.05 0.8 0.3 3.8 7.7 90 150 0 5
+pos_sine 2.8 0 2.8 1.20 1 2.4 0
+pos_sine 2.8 0 2.8 1.95 1 0 -2.4
+angle_lin 2.5 0 2.5 1.20 0 -360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick26 1 0.3 0.05 0.8 0.3 3.8 7.7 90 150 0 6
+pos_sine 2.8 0 2.8 1.60 1 2.4 0
+pos_sine 2.8 0 2.8 2.35 1 0 -2.4
+angle_lin 2.5 0 2.5 1.60 0 -360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick26 1 0.3 0.05 0.8 0.3 3.8 7.7 90 150 0 0
+pos_sine 2.8 0 2.8 2.00 1 2.4 0
+pos_sine 2.8 0 2.8 2.75 1 0 -2.4
+angle_lin 2.5 0 2.5 2.00 0 -360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick26 1 0.3 0.05 0.8 0.3 3.8 7.7 90 150 0 2
+pos_sine 2.8 0 2.8 2.40 1 2.4 0
+pos_sine 2.8 0 2.8 3.15 1 0 -2.4
+angle_lin 2.5 0 2.5 2.40 0 -360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+
+
+brick brick23 1 0.3 0.05 0.45 0.15 4.5 7.0 90 200 0 0
+pos_sine 2.0 0 2.0 0.00 1 1.0 0
+pos_sine 2.0 0 2.0 0.50 1 0 -1.0
+angle_lin 2.0 0 2.0 0.00 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick23 1 0.3 0.05 0.45 0.15 4.5 7.0 90 200 0 0
+pos_sine 2.0 0 2.0 0.40 1 1.0 0
+pos_sine 2.0 0 2.0 0.90 1 0 -1.0
+angle_lin 2.0 0 2.0 0.40 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick23 1 0.3 0.05 0.45 0.15 4.5 7.0 90 200 0 0
+pos_sine 2.0 0 2.0 0.80 1 1.0 0
+pos_sine 2.0 0 2.0 1.30 1 0 -1.0
+angle_lin 2.0 0 2.0 0.80 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick23 1 0.3 0.05 0.45 0.15 4.5 7.0 90 200 0 2
+pos_sine 2.0 0 2.0 1.20 1 1.0 0
+pos_sine 2.0 0 2.0 1.70 1 0 -1.0
+angle_lin 2.0 0 2.0 1.20 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+brick brick23 1 0.3 0.05 0.45 0.15 4.5 7.0 90 200 0 6
+pos_sine 2.0 0 2.0 1.60 1 1.0 0
+pos_sine 2.0 0 2.0 2.10 1 0 -1.0
+angle_lin 2.0 0 2.0 1.60 0 360
+pos_sine 1.0 0 1.0 0.0 1 0.0 -0.1
+
+
+brick brick17 2 0.3 0.05 0.9 0.3 0.5 9.5 0 100 0 8
+pos_sine 1.0 0 1.0 0.0 1 0.0 0.2
+brick brick17 2 0.3 0.05 0.9 0.3 1.6 9.5 0 100 0 0
+pos_sine 1.0 0 1.0 0.0 1 0.0 0.2
+brick brick17 2 0.3 0.05 0.9 0.3 2.7 9.5 0 100 0 0
+pos_sine 1.0 0 1.0 0.0 1 0.0 0.2
+
+brick brick16 2 0.3 0.05 0.9 0.3 0.5 9.0 20 100 0 0
+pos_sine 1.0 0 1.0 0.1 1 0.0 0.2
+brick brick16 2 0.3 0.05 0.9 0.3 1.4 9.0 20 100 0 4
+pos_sine 1.0 0 1.0 0.1 1 0.0 0.2
+brick brick16 2 0.3 0.05 0.9 0.3 2.3 9.0 20 100 0 0
+pos_sine 1.0 0 1.0 0.1 1 0.0 0.2
+
+brick brick15 2 0.3 0.05 0.9 0.3 0.5 8.4 40 100 0 2
+pos_sine 1.0 0 1.0 0.2 1 0.0 0.2
+brick brick15 2 0.3 0.05 0.9 0.3 1.3 8.4 40 100 0 0
+pos_sine 1.0 0 1.0 0.2 1 0.0 0.2
+brick brick15 2 0.3 0.05 0.9 0.3 2.1 8.4 40 100 0 0
+pos_sine 1.0 0 1.0 0.2 1 0.0 0.2
+
+brick brick14 2 0.3 0.05 0.9 0.3 0.5 7.5 60 100 0 8
+pos_sine 1.0 0 1.0 0.3 1 0.0 0.2
+brick brick14 2 0.3 0.05 0.9 0.3 1.1 7.5 60 100 0 6
+pos_sine 1.0 0 1.0 0.3 1 0.0 0.2
+brick brick14 2 0.3 0.05 0.9 0.3 1.7 7.5 60 100 0 0
+pos_sine 1.0 0 1.0 0.3 1 0.0 0.2
+
+brick brick13 2 0.3 0.05 0.9 0.3 0.3 6.5 80 100 0 0
+pos_sine 1.0 0 1.0 0.4 1 0.0 0.2
+brick brick13 2 0.3 0.05 0.9 0.3 0.7 6.5 80 100 0 0
+pos_sine 1.0 0 1.0 0.4 1 0.0 0.2
+brick brick13 2 0.3 0.05 0.9 0.3 1.1 6.5 80 100 0 2
+pos_sine 1.0 0 1.0 0.4 1 0.0 0.2
+brick brick13 2 0.3 0.05 0.9 0.3 1.5 6.5 80 100 0 0
+pos_sine 1.0 0 1.0 0.4 1 0.0 0.2
+
+
+brick brick12 2 0.3 0.05 0.9 0.3 9.5 9.5 0 100 0 0
+pos_sine 1.0 0 1.0 0.1 1 0.0 0.2
+brick brick12 2 0.3 0.05 0.9 0.3 8.4 9.5 0 100 0 6
+pos_sine 1.0 0 1.0 0.1 1 0.0 0.2
+brick brick12 2 0.3 0.05 0.9 0.3 7.3 9.5 0 100 0 0
+pos_sine 1.0 0 1.0 0.1 1 0.0 0.2
+
+brick brick11 2 0.3 0.05 0.9 0.3 9.5 9.0 -20 100 0 2
+pos_sine 1.0 0 1.0 0.2 1 0.0 0.2
+brick brick11 2 0.3 0.05 0.9 0.3 8.6 9.0 -20 100 0 0
+pos_sine 1.0 0 1.0 0.2 1 0.0 0.2
+brick brick11 2 0.3 0.05 0.9 0.3 7.7 9.0 -20 100 0 0
+pos_sine 1.0 0 1.0 0.2 1 0.0 0.2
+
+brick brick10 2 0.3 0.05 0.9 0.3 9.5 8.4 -40 100 0 0
+pos_sine 1.0 0 1.0 0.3 1 0.0 0.2
+brick brick10 2 0.3 0.05 0.9 0.3 8.7 8.4 -40 100 0 8
+pos_sine 1.0 0 1.0 0.3 1 0.0 0.2
+brick brick10 2 0.3 0.05 0.9 0.3 7.9 8.4 -40 100 0 5
+pos_sine 1.0 0 1.0 0.3 1 0.0 0.2
+
+brick brick9 2 0.3 0.05 0.9 0.3 9.5 7.5 -60 100 0 0
+pos_sine 1.0 0 1.0 0.4 1 0.0 0.2
+brick brick9 2 0.3 0.05 0.9 0.3 8.9 7.5 -60 100 0 6
+pos_sine 1.0 0 1.0 0.4 1 0.0 0.2
+brick brick9 2 0.3 0.05 0.9 0.3 8.3 7.5 -60 100 0 2
+pos_sine 1.0 0 1.0 0.4 1 0.0 0.2
+
+brick brick8 2 0.3 0.05 0.9 0.3 9.7 6.5 -80 100 0 0
+pos_sine 1.0 0 1.0 0.5 1 0.0 0.2
+brick brick8 2 0.3 0.05 0.9 0.3 9.3 6.5 -80 100 0 0
+pos_sine 1.0 0 1.0 0.5 1 0.0 0.2
+brick brick8 2 0.3 0.05 0.9 0.3 8.9 6.5 -80 100 0 6
+pos_sine 1.0 0 1.0 0.5 1 0.0 0.2
+brick brick8 2 0.3 0.05 0.9 0.3 8.5 6.5 -80 100 0 8
+pos_sine 1.0 0 1.0 0.5 1 0.0 0.2

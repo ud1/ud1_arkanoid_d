@@ -1,0 +1,25 @@
+// window width height
+window 800 600
+
+// field width height x y logic_width logic_height
+field 600 600 0 0 10.0 10.0
+
+// stat_panel left top right bottom
+stat_panel 600 0 800 600
+
+// score_position left top right bottom
+score_position 612 74 787 109
+
+// level_position left top right bottom
+level_position 730 542 766 570
+
+// mouse_smoothing seconds
+mouse_smoothing 0.07
+
+// background_volume volume
+background_volume 0.8
+
+// velocity_volume_factor value
+velocity_volume_factor 0.05
+
+//disable_effects 1

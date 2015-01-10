@@ -1,0 +1,123 @@
+// balls reserved_balls_number
+balls 5
+
+// platform_scale x y
+platform_scale 1.5 0.3
+
+// short_platform_scale x y
+short_platform_scale 1.0 0.2
+
+// long_platform_scale x y
+long_platform_scale 2.0 0.4
+
+// gravity x y
+gravity 0.0 -7.0
+
+// gravity_left x y
+gravity_left -3.0 -7.0
+
+// gravity_right x y
+gravity_right 3.0 -7.0
+
+// bonus_time platform_bonus_time gravity_bonus_time time_bonus_time
+bonus_time 20 20 20
+
+// velocity_loss_wall value
+velocity_loss_wall 0.05
+
+// velocity_loss_platform value
+velocity_loss_platform 0.2
+
+// surf_friction_coef_wall value
+surf_friction_coef_wall 0.05
+
+// surf_friction_coef_platform value
+surf_friction_coef_platform 0.15
+
+// clouds alpha vx vy
+clouds 0.5 0.1 0.1
+
+// brick brick1_type life velocity_loss surf_friction_coef scale_x scale_y pos_x pos_y angle_in_degrees points is_static bonus
+brick brick24 1 0.05 0.05 0.9 0.3 0.5 8 -50 15 0 8
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 1.5 8 -45 15 0 0
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 2.5 8 -40 15 0 3
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 3.5 8 -35 15 0 7
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 4.5 8 -30 15 0 0
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 5.5 8 -25 15 0 7
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 6.5 8 -20 15 0 0
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 7.5 8 -15 15 0 6
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 8.5 8 -10 15 0 8
+angle_lin 5 0 5 0 0 360
+brick brick24 1 0.05 0.05 0.9 0.3 9.5 8 -5 15 0 0
+angle_lin 5 0 5 0 0 360
+
+brick brick25 1 0.05 0.05 0.9 0.3 0.5 7 50 15 0 0
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 1.5 7 45 15 0 2
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 2.5 7 40 15 0 0
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 3.5 7 35 15 0 8
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 4.5 7 30 15 0 6
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 5.5 7 25 15 0 4
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 6.5 7 20 15 0 0
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 7.5 7 15 15 0 0
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 8.5 7 10 15 0 5
+angle_lin 6 0 6 0 0 -360
+brick brick25 1 0.05 0.05 0.9 0.3 9.5 7 5 15 0 0
+angle_lin 6 0 6 0 0 -360
+
+brick block1 1 0.05 0.05 0.5 0.5773 2.0 6.0 0 20 1 0
+angle_lin 10 0 10 0 0 -360
+brick block1 1 0.05 0.05 0.5 0.5773 4.0 6.0 0 20 1 0
+angle_lin 10 0 10 0 0 -360
+brick block1 1 0.05 0.05 0.5 0.5773 6.0 6.0 0 20 1 0
+angle_lin 10 0 10 0 0 -360
+brick block1 1 0.05 0.05 0.5 0.5773 8.0 6.0 0 20 1 0
+angle_lin 10 0 10 0 0 -360
+
+brick brick23 1 0.05 0.05 0.9 0.3 0.5 5 10 15 0 0
+angle_lin 7 0 7 0 0 360
+brick brick23 1 0.05 0.05 0.9 0.3 1.5 5 -20 15 0 0
+angle_lin 7 0 7 0 0 -360
+brick brick23 1 0.05 0.05 0.9 0.3 2.5 5 30 15 0 3
+angle_lin 7 0 7 0 0 360
+brick brick23 1 0.05 0.05 0.9 0.3 3.5 5 -40 15 0 0
+angle_lin 7 0 7 0 0 -360
+brick brick23 1 0.05 0.05 0.9 0.3 4.5 5 50 15 0 0
+angle_lin 7 0 7 0 0 360
+brick brick23 1 0.05 0.05 0.9 0.3 5.5 5 -60 15 0 5
+angle_lin 7 0 7 0 0 -360
+brick brick23 1 0.05 0.05 0.9 0.3 6.5 5 70 15 0 0
+angle_lin 7 0 7 0 0 360
+brick brick23 1 0.05 0.05 0.9 0.3 7.5 5 -80 15 0 8
+angle_lin 7 0 7 0 0 -360
+brick brick23 1 0.05 0.05 0.9 0.3 8.5 5 90 15 0 0
+angle_lin 7 0 7 0 0 360
+brick brick23 1 0.05 0.05 0.9 0.3 9.5 5 -100 15 0 0
+angle_lin 7 0 7 0 0 -360
+
+brick block1 1 0.05 0.05 0.5 0.5773 1.0 4.0 0 20 1 0
+// angle_lin period start_time end_time time_offset symmetric angle_in_degrees
+angle_lin 10 0 10 0 0 360
+brick block1 1 0.05 0.05 0.5 0.5773 3.0 4.0 0 20 1 0
+angle_lin 10 0 10 0 0 360
+brick block1 1 0.05 0.05 0.5 0.5773 5.0 4.0 0 20 1 0
+angle_lin 10 0 10 0 0 360
+brick block1 1 0.05 0.05 0.5 0.5773 7.0 4.0 0 20 1 0
+angle_lin 10 0 10 0 0 360
+brick block1 1 0.05 0.05 0.5 0.5773 9.0 4.0 0 20 1 0
+angle_lin 10 0 10 0 0 360
