@@ -440,18 +440,17 @@ private:
 	}
 
 	void renderLevelNumber() {
-		/*std::ostringstream score;
-		score.width(2);
-		score.fill('0');
-		score << game.GetLevel();
+		import std.string;
 
-		float w = score.str().size()*small_chars.GetWidth();
-		float h = small_chars.GetHeight();
-		Vector pos(
+		string score = format("%02d", game.getLevel());
+
+		float w = score.length*small_chars.getWidth();
+		float h = small_chars.getHeight();
+		Vector pos = Vector(
 			game.form_config.level_position.right - w,
 			(game.form_config.level_position.top + game.form_config.level_position.bottom - h)/2.0f);
 
-		PrintText(score.str(), small_chars, pos, Color(1.0f, 0.0f, 0.0f));*/
+		printText(score, small_chars, pos, Color(1.0f, 0.0f, 0.0f));
 	}
 
 	// pos - top left point
