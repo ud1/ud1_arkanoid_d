@@ -128,6 +128,10 @@ struct World {
 		vel_volume_factor = vel_volume_factor_;
 	}
 
+	void resetCurrentTime(float current_time_) {
+		current_time = current_time_;
+	}
+
 	void simulateUntil(float t) {
 		if (t <= current_time)
 			return;

@@ -171,7 +171,7 @@ struct RenderData {
 			glEnable(GL_STENCIL_TEST);
 		}
 
-		renderUnmovableObjectsAndPlatform();
+		renderObjectsAndPlatform();
 
 		if (!disable_effects) {
 			glDisable(GL_STENCIL_TEST);
@@ -291,7 +291,7 @@ private:
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
-	void renderUnmovableObjectsAndPlatform() {
+	void renderObjectsAndPlatform() {
 		glColor3f(1,1,1);
 		glEnable(GL_TEXTURE_2D);
 		glBindTexture(GL_TEXTURE_2D, elements_textureID);

@@ -10,63 +10,63 @@ import derelict.vorbis.enc;
 import derelict.vorbis.file;
 import ud1_arkanoid_d.game;
 
-Game game;
+Game *g_game;
 
 void close_main_window() {
-	game.isRunning = false;
+	g_game.isRunning = false;
 }
 
 void lbdown(int x, int y) {
-	if (game.getState() == Game.State.SIMULATION) {
-		game.world.player_platform.setNoVelocityLoss(true);
+	if (g_game.getState() == Game.State.SIMULATION) {
+		g_game.world.player_platform.setNoVelocityLoss(true);
 	}
 }
 
 void lbup(int x, int y) {
-	game.world.player_platform.setNoVelocityLoss(false);
+	g_game.world.player_platform.setNoVelocityLoss(false);
 }
 
 void on_deactivate() {
-	if (game.getState() != Game.State.PAUSE)
-		game.pause();
+	if (g_game.getState() != Game.State.PAUSE)
+		g_game.pause();
 }
 
 void key_down(int key) {
-	if (game.getState() == Game.State.SIMULATION) {
+	if (g_game.getState() == Game.State.SIMULATION) {
 		float angle = 0.2f;
 		if (key == SDLK_d) {
-			game.world.player_platform.setTargetAngle(-angle);
+			g_game.world.player_platform.setTargetAngle(-angle);
 		} else if (key == SDLK_a) {
-			game.world.player_platform.setTargetAngle(angle);
+			g_game.world.player_platform.setTargetAngle(angle);
 		}
 	}
 }
 
 void key_up(int key) {
 	if (key == SDLK_ESCAPE) {
-		game.pause();
+		g_game.pause();
 	}
 
 	if (key == SDLK_a || key == SDLK_d) {
-		game.world.player_platform.setTargetAngle(0.0f);
+		g_game.world.player_platform.setTargetAngle(0.0f);
 	}
 
-	if (game.getState() == Game.State.SIMULATION) {
+	if (g_game.getState() == Game.State.SIMULATION) {
 		if (key == SDLK_r) {
-			game.throwBall();
+			g_game.throwBall();
 		}
 	}
 
-	if (game.getState() == Game.State.FINAL) {
+	if (g_game.getState() == Game.State.FINAL) {
 		if (key == SDLK_RETURN || key == SDLK_SPACE) {
-			game.restartGame();
+			g_game.restartGame();
 		}
 	}
 }
 
 void mmove(int x, int y) {
-	if (game.getState() == Game.State.SIMULATION) {
-		game.mouse.setDeltaPos(cast(float) x, cast(float) -y);
+	if (g_game.getState() == Game.State.SIMULATION) {
+		g_game.mouse.setDeltaPos(cast(float) x, cast(float) -y);
 	}
 }
 
@@ -84,6 +84,9 @@ void main(char[][] args)
 	DerelictVorbis.load();
     DerelictVorbisEnc.load();
     DerelictVorbisFile.load();
+
+    Game game;
+    g_game = &game;
 
 	if (args.length > 1) {
 		game.level = to!int(args[1]);

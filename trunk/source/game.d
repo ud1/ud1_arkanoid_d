@@ -1,10 +1,9 @@
 module ud1_arkanoid_d.game;
 import derelict.sdl2.sdl;
 import derelict.opengl3.gl;
-import std.concurrency;
+import core.thread;
 
-void soundThreadFunc(shared Game *game_) {
-	Game *game = cast(Game *) game_;
+void soundThreadFunc(Game *game) {
 	while (game.isRunning) {
 		game.sound_system.update();
 		SDL_Delay(100);
@@ -55,6 +54,7 @@ struct Game {
 	Vector field_to_window_scale;
 	Vector window_to_field_scale;
 	SoundSystem sound_system;
+	Thread sound_system_thread;
 
 	Vector getFieldLogicSize() const {
 		return Vector(form_config.field.logic_width, form_config.field.logic_height);
@@ -102,7 +102,8 @@ struct Game {
 		sound_system.load(Sounds.BONUS_SOUND, "data/bonus.ogg");
 
 		//sound_thread = std::thread(soundThreadFunc, this);
-		spawn(&soundThreadFunc, cast(shared) &this);
+		sound_system_thread = new Thread((){soundThreadFunc(&this);});
+		sound_system_thread.start();
 
 		world.setSoundSystem(&sound_system, form_config.velocity_volume_factor);
 
@@ -114,7 +115,9 @@ struct Game {
 	}
 
 	void destroy() {
-		delete window;
+		isRunning = false;
+		sound_system_thread.join();
+		typeid(window).destroy(window);
 	}
 
 	State getState() const {
@@ -407,6 +410,7 @@ protected:
 			timer.resetGlobalTime(global_time);
 			prev_global_time = global_time;
 			mouse.absSet(world.player_platform.getTarget()*field_to_window_scale);
+			world.resetCurrentTime(global_time);
 		}
 
 		double delta_t = timer.globalTime() - prev_global_time;
@@ -446,7 +450,7 @@ protected:
 			state_switch = false;
 
 			next_state_switch_time = timer.globalTime() + 2.0;
-			if (reserve_balls-- <= 0) {
+			if (reserve_balls <= 0) {
 				state = State.FINAL;
 				state_switch = true;
 			}
@@ -457,10 +461,11 @@ protected:
 			state_switch = true;
 			resetBonuses();
 			resetPlatform();
+			reserve_balls--;
 			resetBall();
 		}
 
-		string str = "Balls left " ~ to!string(reserve_balls);
+		string str = "Balls left " ~ to!string(reserve_balls - 1);
 		float wid = render_data.big_chars.getWidth() * str.length;
 		float heig = render_data.big_chars.getHeight();
 		Vector pos = Vector((form_config.window.width - wid) / 2.0f, (form_config.window.height - heig) / 2.0f);

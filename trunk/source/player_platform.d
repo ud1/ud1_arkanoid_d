@@ -48,8 +48,6 @@ class PlayerPlatform : PhysicalObject {
 		right_top = right_top_;
 	}
 
-	void Collide(){}
-
 	void setNoVelocityLoss(bool b) {
 		if (b)
 			collision_object.velocity_loss = 0.0f;
