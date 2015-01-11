@@ -63,6 +63,7 @@ struct Game {
 	void initialize() {
 		import std.stdio;
 
+		world.initialize();
 		render_data.setGame(&this);
 		isRunning = true;
 		global_time = game_global_time = 0.0;

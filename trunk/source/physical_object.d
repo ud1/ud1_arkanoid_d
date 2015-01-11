@@ -7,6 +7,11 @@ abstract class PhysicalObject {
 	import ud1_arkanoid_d.polygon_collision_object;
 	import ud1_arkanoid_d.mover;
 
+	ptrdiff_t opCmp(const PhysicalObject c) const
+	{
+		return (cast(const void*)this - cast(const void*)c);
+	}
+
 	final void setPrototype(in ObjectPrototype p, in Vector scale) {
 		this.scale = scale;
 		collision_object.setPrototype(p.col_obj_proto, scale);

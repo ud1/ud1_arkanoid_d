@@ -2,6 +2,7 @@ module ud1_arkanoid_d.world;
 import ud1_arkanoid_d.distance;
 import ud1_arkanoid_d.ball;
 import ud1_arkanoid_d.vector2d;
+import std.container;
 
 enum float min_delta_t = 1.0f/1500.0f;
 enum float max_delta_t = 1.0f/500.0f;
@@ -116,11 +117,15 @@ struct World {
 	import ud1_arkanoid_d.render_object;
 
 	float current_time = 0.0f;
-	PhysicalObject[] objects;
+	RedBlackTree!PhysicalObject objects;
 	Wall[] walls;
 	Ball[] balls;
 	Bonus[] bonuses;
-	PlayerPlatform player_platform = new PlayerPlatform;
+	PlayerPlatform player_platform;
+
+	void initialize() {
+		clear();
+	}
 
 	void setSoundSystem(SoundSystem *s, float vel_volume_factor_) {
 
@@ -155,15 +160,15 @@ struct World {
 	}
 
 	void addObj(PhysicalObject o) {
-		objects ~= o;
+		objects.insert(o);
 	}
 
 	void addActiveBlock(PhysicalObject o) {
-		active_blocks ~= o;
+		active_blocks.insert(o);
 	}
 
-	size_t activeBlockNumber() const {
-		return active_blocks.length;
+	size_t activeBlockNumber() {
+		return active_blocks.length();
 	}
 
 	size_t ballsNumber() const {
@@ -172,13 +177,15 @@ struct World {
 
 	void clear() {
 		current_time = 0.0f;
-		objects = null;
 		walls = null;
 		balls = null;
 		bonuses = null;
-		for_deletion = null;
-		active_blocks = null;
 		new_balls = null;
+
+		objects = redBlackTree!PhysicalObject();
+		for_deletion = redBlackTree!PhysicalObject();
+		active_blocks = redBlackTree!PhysicalObject();
+		player_platform = new PlayerPlatform;
 	}
 
 	void setGravity(in Vector g) {
@@ -200,30 +207,14 @@ struct World {
 	}
 
 	void removeObj(PhysicalObject o) {
-		for_deletion ~= o;
+		for_deletion.insert(o);
 	}
 
 private:
 	void removeUnusedObjects() {
-		import std.algorithm;
-
-		if (!for_deletion.length)
-			return;
-
-		PhysicalObject ar[];
-        foreach(ref PhysicalObject obj; objects) {
-			if (!canFind(for_deletion, obj))
-				ar ~= obj;
-        }
-        objects = ar;
-
-        ar = null;
-        foreach(ref PhysicalObject obj; active_blocks) {
-			if (!canFind(for_deletion, obj))
-				ar ~= obj;
-        }
-        active_blocks = ar;
-		for_deletion = null;
+		objects.removeKey(for_deletion[]);
+		active_blocks.removeKey(for_deletion[]);
+		for_deletion.clear();
 	}
 
 	float clampDeltaVel(float v) {
@@ -387,8 +378,8 @@ private:
 		new_balls = [];
 	}
 
-	PhysicalObject[] for_deletion;
-	PhysicalObject[] active_blocks;
+	RedBlackTree!PhysicalObject for_deletion;
+	RedBlackTree!PhysicalObject active_blocks;
 	Ball[] new_balls;
 	SoundSystem *snd_system;
 	float vel_volume_factor;
